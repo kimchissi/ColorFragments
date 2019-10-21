@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColorFragments</string>
+    <string name="title_activity_canvas">MainActivity</string>
+    <string-array
+        name="color_array">
+        <item>seleccione</item>
+        <item>rojo</item>
+        <item>amarillo</item>
+        <item>verde</item>
+        <item>azul</item>
+        <item>púrpura</item>
+        <item>teal</item>
+        <item>aqua</item>
+        <item>fucsia</item>
+        <item>negro</item>
+        <item>blanco</item>
+    </string-array>
+    <string name="back_button">atrás</string>
+</resources>
