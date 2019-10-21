@@ -3,6 +3,7 @@ package edu.temple.colorfragments;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Spinner;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements PaletteFragment.O
 
     PaletteFragment paletteFragment;
     CanvasFragment canvasFragment;
+    private String[] colorsHex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +22,17 @@ public class MainActivity extends AppCompatActivity implements PaletteFragment.O
         this.setTitle("Color Fragment Activity");
         Resources res = this.getResources();
         final String[] colors = res.getStringArray(R.array.color_array);
-        final String[] colorsHex = res.getStringArray(R.array.color_hex_array);
-        final Spinner spinner = findViewById(R.id.colorSpinner);
-        final ColorAdapter adapter = new ColorAdapter(MainActivity.this, colors, colorsHex);
+        colorsHex = res.getStringArray(R.array.color_hex_array);
         paletteFragment = PaletteFragment.newInstance(colors, colorsHex);
+        canvasFragment = CanvasFragment.newInstance();
+        getSupportFragmentManager().beginTransaction().add(R.id.mainLayout, canvasFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.mainLayout, paletteFragment).commit();
-        //canvasFragment = CanvasFragment.newInstance();
     }
 
     @Override
     public void onFragmentInteraction(int position) {
         if (position > 0) {
-
+            canvasFragment.changeBackgroundColor(colorsHex[position]);
         }
     }
 }

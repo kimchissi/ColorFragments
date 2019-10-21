@@ -53,4 +53,5 @@ public class ColorAdapter extends BaseAdapter {
         textView.setTextColor(Color.GRAY);
         return textView;
     }
+
 }
