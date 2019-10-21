@@ -1,18 +1,14 @@
 package edu.temple.colorfragments;
 
-import android.content.Context;
-import android.content.Intent;
+
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 
 

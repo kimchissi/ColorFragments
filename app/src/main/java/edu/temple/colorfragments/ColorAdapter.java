@@ -2,7 +2,6 @@ package edu.temple.colorfragments;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
